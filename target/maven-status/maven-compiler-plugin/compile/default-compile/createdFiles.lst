@@ -1,0 +1,4 @@
+sa/activity/JAXRSConfiguration.class
+sa/activity/model/Activity.class
+sa/activity/service/ActivityService.class
+sa/activity/resource/ActivityResource.class
