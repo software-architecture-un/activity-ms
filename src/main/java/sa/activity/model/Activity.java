@@ -16,55 +16,47 @@ public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
+    private int user;// el usuario quien creo la tarea
+    private int place;
+    //private long userid;
     private String description;
-    private long qualification;
-    private long visits;
-    private Date dead; // fecha que muere la actividad
 
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public String getName(){
-      return name;
-    }
-    public void setName(String name){
-      this.name = name;
-    }
+      public Long getId() {
+          return id;
+      }
+      public void setId(Long id) {
+          this.id = id;
+      }
 
-    public Long getQualification() {
-        return qualification;
-    }
-    public void setQualification(Long qualification) {
-        this.qualification = qualification;
-    }
+      public String getName(){
+        return name;
+      }
+      public void setName(String name){
+        this.name = name;
+      }
 
-    public Long getVisits() {
-        return visits;
-    }
-    public void setVisits(Long visits) {
-        this.visits = visits;
-    }
+      public int getUser() {
+          return user;
+      }
+      public void setUser(int user) {
+          this.user= user;
+      }
 
-    
+      public int getPlace() {
+          return place;
+      }
 
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
+      public void setPlace(int place) {
+          this.place = place;
+      }
 
-    public Date getDead() {
-        return dead;
-    }
-      public void setDead(Date dead)   {
-          this.dead = dead;
+      public String getDescription() {
+          return description;
+      }
+      public void setDescription(String description) {
+          this.description = description;
+      }
 
-        }
 }

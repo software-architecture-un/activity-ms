@@ -32,10 +32,9 @@ public class ActivityService {
     public Activity updateActivity(long id, Activity activity) {
         Activity activityToUpdate = entityManager.find(Activity.class, id);
         activityToUpdate.setName(activity.getName());
+        activityToUpdate.setUser(activity.getUser());
+        activityToUpdate.setPlace(activity.getPlace());
         activityToUpdate.setDescription(activity.getDescription());
-        activityToUpdate.setQualification(activity.getQualification());
-        activityToUpdate.setVisits(activity.getVisits());
-        activityToUpdate.setDead(activity.getDead());
         entityManager.merge(activityToUpdate);
         return entityManager.find(Activity.class, id);
     }
@@ -46,4 +45,3 @@ public class ActivityService {
         return id;
     }
 }
-
